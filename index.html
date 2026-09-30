@@ -1,3 +1,375 @@
-<html>
-<h1> 레비엣탕홈페이지 </h1>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>베트남 여행 & 미식 가이드 | 나의 여행 기록</title>
+    <style>
+        /* 기본 스타일 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 히어로 세션 */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            color: #ffcc00;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* 네비게이션 */
+        nav {
+            background-color: #006a31;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        /* 섹션 공통 스타일 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            display: block;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #006a31;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #da251d;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* 그리드 레이아웃 */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        /* 카드 스타일 */
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-tag {
+            display: inline-block;
+            background-color: #ffe6e6;
+            color: #da251d;
+            font-size: 0.8rem;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        /* 푸터 */
+        footer {
+            background-color: #222;
+            color: #888;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Xin Chào! 베트남 여행 일기</h1>
+        <p>제가 가장 사랑하는 동남아의 보석, 베트남의 아름다운 명소 10곳과 꼭 먹어봐야 할 미식 10가지를 소개합니다.</p>
+    </header>
+
+    <nav>
+        <a href="#places">추천 여행지 10선</a>
+        <a href="#foods">대표 음식 10선</a>
+    </nav>
+
+    <div class="container">
+        <!-- 명소 섹션 -->
+        <section id="places">
+            <h2 class="section-title">베트남 추천 여행지 10선</h2>
+            <div class="grid">
+                
+                <div class="card">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=600&q=80" alt="하롱베이">
+                    <div class="card-content">
+                        <span class="card-tag">북부</span>
+                        <h3 class="card-title">1. 하롱베이 (Ha Long Bay)</h3>
+                        <p class="card-desc">유네스코 세계자연유산으로 지정된 곳으로, 바다 위에 떠 있는 수천 개의 석회암 섬들이 장관을 이룹니다.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80" alt="호이안">
+                    <div class="card-content">
+                        <span class="card-tag">중부</span>
+                        <h3 class="card-title">2. 호이안 고대 도시 (Hoi An)</h3>
+                        <p class="card-desc">밤마다 알록달록한 등불이 밝혀지는 고풍스러운 옛 무역 도시로, 특유의 로맨틱한 분위기를 자랑합니다.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" alt="사파">
+                    <div class="card-content">
+                        <span class="card-tag">북부</span>
+                        <h3 class="card-title">3. 사파 (Sapa)</h3>
+                        <p class="card-desc">베트남 북부 산악 지대에 위치한 곳으로, 계단식 논 풍경과 소수민족의 문화를 체험할 수 있는 힐링 명소입니다.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=600&q=80" alt="다낭">
+                    <div class="card-content">
+                        <span class="card-tag">중부</span>
+                        <h3 class="card-title">4. 다낭 (Da Nang)</h3>
+                        <p class="card-desc">아름다운 미케 비치와 바나힐 골든 브릿지로 유명하며, 휴양과 관광을 동시에 즐기기 좋은 대표 도시입니다.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=600&q=80" alt="하노이">
+                    <div class="card-content">
+                        <span class="card-tag">북부</span>
+                        <h3 class="card-title">5. 하노이 (Hanoi)</h3>
+                        <p class="card-desc">베트남의 수도이자 천년의 역사를 간직한 도시. 호안끼엠 호수와 성요셉 성당 등 역사적 건축물이 많습니다.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1583417267826-a2c4d1616715?auto=format&fit=crop&w=600&q=80" alt="호치민">
+                    <div class="card-content">
+                        <span class="card-tag">남부</span>
+                        <h3 class="card-title">6. 호치민 (Ho Chi Minh)</h3>
+                        <p class="card-desc">베트남 최대의 경제 도시로, 프랑스 식민지 시절 건축물과 에너지가 넘치는 야시장 생태계를 경험할 수 있습니다.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1540206395-68808572332f?auto=format&fit=crop&w=600&q=80" alt="푸꾸옥">
+                    <div class="card-content">
+                        <span class="card-tag">남부</span>
+                        <h3 class="card-title">7. 푸꾸옥 (Phu Quoc)</h3>
+                        <p class="card-desc">베트남 최남단의 청정 섬. 에메랄드빛 바다와 고급 리조트, 아름다운 석양이 펼쳐지는 휴양 낙원입니다.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=600&q=80" alt="닌빈">
+                    <div class="card-content">
+                        <span class="card-tag">북부</span>
+                        <h3 class="card-title">8. 닌빈 (Ninh Binh)</h3>
+                        <p class="card-desc">'육지의 하롱베이'라 불리며, 짱안 삼판 배를 타고 이국적인 기암괴석과 동굴을 유람하는 매력이 있습니다.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="무이네">
+                    <div class="card-content">
+                        <span class="card-tag">남부</span>
+                        <h3 class="card-title">9. 무이네 (Mui Ne)</h3>
+                        <p class="card-desc">붉은 모래언덕(레드 사구)과 하얀 모래언덕(화이트 사구)에서 사막 사파리와 지프 투어를 즐길 수 있는 곳입니다.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="달랏">
+                    <div class="card-content">
+                        <span class="card-tag">남부 고원</span>
+                        <h3 class="card-title">10. 달랏 (Da Lat)</h3>
+                        <p class="card-desc">해발 1,500m 고원 지대에 위치해 일년 내내 서늘한 기후를 자랑하며, 꽃과 호수가 아름다운 영원한 봄의 도시입니다.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 음식 섹션 -->
+        <section id="foods" style="margin-top: 80px;">
+            <h2 class="section-title">베트남 미식 추천 10선</h2>
+            <div class="grid">
+
+                <div class="card">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&fit=crop&w=600&q=80" alt="쌀국수">
+                    <div class="card-content">
+                        <span class="card-tag">국물 요리</span>
+                        <h3 class="card-title">1. 포 (Pho)</h3>
+                        <p class="card-desc">소고기나 닭고기 육수에 진한 향신료와 쌀면을 넣고 고수를 얹어 먹는 베트남 대표 쌀국수입니다.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1626804475297-41608e074eb1?auto=format&fit=crop&w=600&q=80" alt="반미">
+                    <div class="card-content">
+                        <span class="card-tag">샌드위치</span>
+                        <h3 class="card-title">2. 반미 (Banh Mi)</h3>
+                        <p class="card-desc">바삭한 바게트 빵에 고기, 오이, 절인 무와 당근, 고수, 소스를 넣어 만든 베트남식 샌드위치입니다.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1541518763669-27fef04b14ea?auto=format&fit=crop&w=600&q=80" alt="분짜">
+                    <div class="card-content">
+                        <span class="card-tag">면 요리</span>
+                        <h3 class="card-title">3. 분짜 (Bun Cha)</h3>
+                        <p class="card-desc">숯불에 구운 돼지고기와 쌀면(분), 신선한 채소를 차가운 느억맘 느억쩜 소스에 적셔 먹는 요리입니다.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80" alt="반쎄오">
+                    <div class="card-content">
+                        <span class="card-tag">부침 요리</span>
+                        <h3 class="card-title">4. 반쎄오 (Banh Xeo)</h3>
+                        <p class="card-desc">쌀가루 반죽에 강황을 넣어 노랗게 구운 뒤, 새우, 돼지고기, 숙주를 넣어 부쳐 라이스페이퍼에 싸 먹는 부침개입니다.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&q=80" alt="고이꾸온">
+                    <div class="card-content">
+                        <span class="card-tag">애피타이저</span>
+                        <h3 class="card-title">5. 고이꾸온 (Goi Cuon)</h3>
+                        <p class="card-desc">라이스페이퍼에 새우, 돼지고기, 야채, 쌀면을 말아 땅콩소스나 느억맘 소스에 찍어 먹는 스프링롤입니다.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" alt="연유커피">
+                    <div class="card-content">
+                        <span class="card-tag">음료</span>
+                        <h3 class="card-title">6. 카페 쓰어다 (Ca Phe Sua Da)</h3>
+                        <p class="card-desc">진하게 내린 베트남 로부스타 원두 드립 커피에 달콤한 연유와 얼음을 섞어 마시는 대표 아이스 커피입니다.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80" alt="껌떰">
+                    <div class="card-content">
+                        <span class="card-tag">밥 요리</span>
+                        <h3 class="card-title">7. 껌떰 (Com Tam)</h3>
+                        <p class="card-desc">부서진 쌀로 지은 밥에 숯불 돼지갈비(스응느엉)와 계란 후라이, 야채를 곁들여 먹는 남부식 덮밥입니다.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80" alt="분보후에">
+                    <div class="card-content">
+                        <span class="card-tag">매콤한 국물</span>
+                        <h3 class="card-title">8. 분보후에 (Bun Bo Hue)</h3>
+                        <p class="card-desc">베트남 옛 수도 후에 지방의 요리로, 매콤하고 짭조름한 소고기 육수에 굵은 쌀면을 넣은 얼큰한 국수입니다.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&q=80" alt="에그커피">
+                    <div class="card-content">
+                        <span class="card-tag">디저트 음료</span>
+                        <h3 class="card-title">9. 에그 커피 (Ca Phe Trung)</h3>
+                        <p class="card-desc">계란 노른자와 연유를 휘핑해 부드럽고 커스터드 같은 크림을 커피 위에 얹어 마시는 하노이 특산 커피입니다.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="모닝글로리">
+                    <div class="card-content">
+                        <span class="card-tag">채소 볶음</span>
+                        <h3 class="card-title">10. 라우몽싸오똠 (Rau Muong Xao Toi)</h3>
+                        <p class="card-desc">공심채(모닝글로리)를 다진 마늘과 생선 소스로 센 불에 빠르게 볶아낸 베트남 국민 반찬입니다.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© My Vietnam Travel & Food Log. All Rights Reserved.</p>
+    </footer>
+
+</body>
 </html>
